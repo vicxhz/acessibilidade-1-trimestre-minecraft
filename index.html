@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is Minecraft</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo Minecraft" class="logo" />
+        <h1>This is Minecraft</h1>
+        <p class="subtitle">O jogo que marcou a infância e adolescência de milhões de pessoas</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <img src="images/minecraft-king.jpg" alt="Personagens do Minecraft" />
+            <p>Imagem representando personagens clássicos dentro do universo Minecraft.</p>
+        </section>
+
+        <section class="description">
+            <h2>Descrição</h2>
+            <p>Minecraft é um jogo sandbox onde os jogadores exploram mundos criados por blocos, coletam recursos, constroem estruturas e vivem aventuras infinitas.</p>
+        </section>
+
+        <section class="history">
+            <h2>História</h2>
+            <p>Lançado oficialmente em 2011, Minecraft foi criado por Markus Persson. Desde então, se tornou um fenômeno global e é usado tanto para entretenimento quanto para educação.</p>
+            <img src="images/mine-1.jpg" alt="Templo Minecraft durante o pôr-do-sol" />
+            <p>Ambientes incríveis podem ser construídos, como o templo acima, demonstrando a criatividade dos jogadores.</p>
+        </section>
+
+        <section class="curiosities">
+            <h2>Curiosidades</h2>
+            <ul>
+                <li>O jogo foi comprado pela Microsoft em 2014.</li>
+                <li>Existem mais de 100 milhões de jogadores ativos.</li>
+                <li>O modo criativo é um dos favoritos dos fãs.</li>
+            </ul>
+            <img src="images/youtubers.jpg" alt="Youtubers brasileiros de Minecraft" />
+            <p>Na imagem, alguns dos principais youtubers brasileiros que marcaram época entre 2016 e 2019 com conteúdo de Minecraft.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contato:</p>
+        <ul>
+            <li>📞 (41) 984001872</li>
+            <li>📧 vigelinski@icloud.com</li>
+            <li>📷 Instagram: <a href="https://instagram.com/vigelinski" target="_blank">@vigelinski</a></li>
+        </ul>
+        <p>Link do site: <a href="https://vicxhz.github.io/acessibilidade-1-trimestre-minecraft/" target="_blank">Clique aqui</a></p>
+    </footer>
+
+    <div class="accessibility">
+        <button onclick="toggleContrast()">Alto Contraste</button>
+        <button onclick="zoomIn()">Aumentar Zoom</button>
+        <button onclick="zoomOut()">Diminuir Zoom</button>
+    </div>
+
+    <script>
+        let isHighContrast = false;
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+
+        let zoom = 1;
+        function zoomIn() {
+            zoom += 0.1;
+            document.body.style.transform = `scale(${zoom})`;
+            document.body.style.transformOrigin = '0 0';
+        }
+
+        function zoomOut() {
+            zoom = Math.max(0.5, zoom - 0.1);
+            document.body.style.transform = `scale(${zoom})`;
+            document.body.style.transformOrigin = '0 0';
+        }
+    </script>
+</body>
+</html>
